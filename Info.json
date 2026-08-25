@@ -1,0 +1,27 @@
+{
+  "pkgId": "lzup.test.healthlock",
+  "name": "生命锁定测试 (HealthLock)",
+  "author": "lzup",
+  "version": "1.0.0-test",
+  "versionCode": 2026082501,
+  "brieflyDescribe": "受到非致命伤害后在下一帧恢复至最大生命值",
+  "description": "KernelLoader 测试模组。Hook Player.Update(int)，每帧将 statLife 恢复为 statLifeMax2。",
+  "features": ["MECHANICS_CHANGE", "CHEAT"],
+  "sizeCategory": "TINY",
+  "targetGameVersion": "1.4.5.0",
+  "minGameVersion": "1.4.5.0",
+  "maxGameVersion": "1.4.5.0",
+  "support": {
+    "android": {"arm64": true, "arm": false, "x64": false, "x86": false},
+    "windows": {"arm64": false, "arm": false, "x64": false, "x86": false},
+    "linux": {"arm64": false, "arm": false, "x64": false, "x86": false},
+    "mac": {"arm64": false, "x64": false},
+    "ios": {"arm64": false, "x64": false, "x86": false}
+  },
+  "dependence": [],
+  "conflicts": [],
+  "stableVerified": false,
+  "experimental": true,
+  "deprecated": false,
+  "hasExtendedContent": true
+}
