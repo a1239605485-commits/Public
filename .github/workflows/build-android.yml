@@ -24,11 +24,11 @@ jobs:
 
     - name: Configure
       run: |
-        cmake --preset android-arm64-release
+        cmake --preset ci-android-arm64-release
 
     - name: Build
       run: |
-        cmake --build --preset android-arm64-release
+        cmake --build --preset ci-android-arm64-release
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
