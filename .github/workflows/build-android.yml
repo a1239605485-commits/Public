@@ -1,0 +1,38 @@
+name: Build Android ARM64 HealthLock
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup NDK
+      uses: nttld/setup-ndk@v1
+      with:
+        ndk-version: r28
+
+    - name: Setup CMake
+      uses: lukka/get-cmake@latest
+
+    - name: Configure
+      run: |
+        cmake --preset android-arm64-release
+
+    - name: Build
+      run: |
+        cmake --build --preset android-arm64-release
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: HealthLock-Android-arm64
+        path: |
+          build/**
